@@ -21,8 +21,12 @@ public class ServiceImplimentation implements EmployeeService {
 
 	@Override
 	public Employee getEmployee(int id) {
-	 Employee byidemployee = employeeRepository.findById(id).get();
-		return byidemployee;
+	 if(employeeRepository.existsById(id)){
+		 Employee employee = employeeRepository.findById(id).get();
+		 return employee;
+		 
+	 }
+		return null;
 	}
 
 	@Override
