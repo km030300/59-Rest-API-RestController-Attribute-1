@@ -1,0 +1,15 @@
+package com.cjc.service;
+
+import java.util.List;
+
+import com.cjc.model.Employee;
+
+public interface EmployeeService {
+	
+	Employee saveEmployee(Employee emp);
+	Employee getEmployee(int id);
+	List<Employee> getAllEmployee();
+	
+	
+
+}
